@@ -2,8 +2,8 @@ import React from 'react';
 import { Modal, Form, Select, Input } from 'antd';
 import styles from './ProfileEditModal.module.scss';
 import { LuUser, LuLayout } from "react-icons/lu";
-import { IAppConfig } from '@/pages';
 import { BiCommentDetail } from "react-icons/bi";
+import { CgDarkMode } from "react-icons/cg";
 
 interface Props {
   open: boolean;
@@ -23,7 +23,7 @@ export default function ProfileEditModal({ appState, onClose, open }: Props): JS
 
   function handleSubmitForm(): void {
     const values = form.getFieldsValue();
-    setAppConfig(values as IAppConfig);
+    setAppConfig((prev: IAppConfig) => ({ ...prev, ...values as IAppConfig }));
     onClose();
   }
 
@@ -45,6 +45,14 @@ export default function ProfileEditModal({ appState, onClose, open }: Props): JS
 
           <Form.Item label={<Label icon={<BiCommentDetail />} text='Bio' />} name="bio" rules={[{ required: true, message: 'Required field' }]}>
             <Input />
+          </Form.Item>
+
+          <Form.Item label={<Label icon={<CgDarkMode />} text='Theme' />} name="theme">
+            <Select>
+              <Select.Option value="device">Same as device</Select.Option>
+              <Select.Option value="dark">Dark</Select.Option>
+              <Select.Option value="light">Light</Select.Option>
+            </Select>
           </Form.Item>
 
           <Form.Item label={<Label icon={<LuLayout />} text='Layout' />} name="layout">

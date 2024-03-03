@@ -1,14 +1,28 @@
 .Header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: transparent;
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 25px;
+  backdrop-filter: blur(10px);
+
+  &>* {
+    flex: 0 0 auto;
+  }
 
   &_Horizontal {
     flex-direction: row;
+    height: 110px;
   }
 
   &_Vertical {
     flex-direction: column;
+    height: 180px;
 
     .Header_Info {
       align-items: center;
