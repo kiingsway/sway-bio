@@ -1,0 +1,17 @@
+.Main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &_Form {
+    width: 300px;
+  }
+}
+
+.Label {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}

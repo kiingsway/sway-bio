@@ -1,0 +1,36 @@
+.Main {
+  display: flex;
+  justify-content: center;
+
+  &_App {
+    width: 800px;
+    padding: 20px 20px;
+  }
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  &_Info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+
+    &>h2 {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Homemade Apple' !important;
+      line-height: 0.7em;
+      z-index: 1;
+    }
+    
+    &>a {
+      line-height: 0.7em;
+      font-weight: 600;
+      color: #777777;
+      z-index: 2;
+    }
+  }
+}

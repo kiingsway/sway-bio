@@ -1,0 +1,51 @@
+.Header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &_Horizontal {
+    flex-direction: row;
+  }
+
+  &_Vertical {
+    flex-direction: column;
+
+    .Header_Info {
+      align-items: center;
+    }
+  }
+
+  &_Info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+
+    &>h2 {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Homemade Apple' !important;
+      line-height: 0.7em;
+      z-index: 1;
+    }
+
+    &>a {
+      line-height: 0.7em;
+      font-weight: 600;
+      color: #777777;
+      z-index: 2;
+    }
+  }
+}
+
+.Avatar {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: 200ms all ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
