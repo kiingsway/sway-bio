@@ -1,11 +1,10 @@
 import React from 'react';
 import { Layout } from 'antd';
 import styles from './Home.module.scss';
-import parameters from './app_parameters';
+import parameters from '../app/app_parameters';
 import AppHeader from '@/pages-components/AppHeader';
 import { Content } from 'antd/es/layout/layout';
 import ComponentCard from '@/pages-components/ComponentCard';
-import AppDivider from '@/pages-components/AppDivider';
 import { FaGithub, FaInstagram, FaSpotify } from "react-icons/fa";
 import { FaSoundcloud, FaTiktok } from "react-icons/fa6";
 
