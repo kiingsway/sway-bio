@@ -17,8 +17,8 @@ const nextConfig = {
       destination: "https://scontent.cdninstagram.com/v/t51.2885-19/310458559_193446419808092_5790281747276574563_n.jpg?stp=dst-jpg_s150x150&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=YLoDdoez5UIAX8xiNqW&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfC-cJsZb3iqw8vHWfzOHu8jTBAN73KWiUGM_YrGlI8e3A&oe=65EFDFB4&_nc_sid=10d13b",
     },
     {
-      source: "/swayobj_ig_profile",
-      destination: "https://scontent-ord5-2.cdninstagram.com/v/t51.2885-19/431334609_1706474303209788_1001797942145952521_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=100&_nc_ohc=8FUYUgeYSMAAX8sBJuU&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDZ_iY58c0JdgVZIFeJN42V1tu1aXvYp_oiaXdkr-rhVA&oe=65EA96AC&_nc_sid=8b3546",
+      source: "/sueyobj_ig_profile",
+      destination: "https://scontent.cdninstagram.com/v/t51.2885-19/431334609_1706474303209788_1001797942145952521_n.jpg?stp=dst-jpg_s150x150&_nc_ht=scontent.cdninstagram.com&_nc_cat=100&_nc_ohc=kjcjIpanUCcAX93T7B-&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfBAJO3c6DF8hHgR8U7HUDW2O9Ar43W0ZzDfnn7R3JTsHg&oe=65F0856C&_nc_sid=10d13b",
     },
     {
       source: "/kingsway_sc_profile",

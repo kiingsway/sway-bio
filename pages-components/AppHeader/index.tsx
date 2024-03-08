@@ -7,7 +7,6 @@ import useBoolean from '@/app/hooks/useBoolean';
 import { Header } from 'antd/es/layout/layout';
 
 interface Props {
-  imageUrl?: string;
   appState: [IAppConfig, React.Dispatch<React.SetStateAction<IAppConfig>>];
 }
 
@@ -26,7 +25,7 @@ export default function AppHeader({ appState }: Props): JSX.Element {
     ])}>
       <Tooltip title="Edit profile" mouseEnterDelay={1}>
         {/* <Avatar className={styles.Avatar} size={72} onClick={openModal} src="/kiingsway_gh_profile" /> */}
-        <Avatar size={72} onClick={undefined} src="/kiingsway_gh_profile" />
+        <Avatar size={72} src="/kiingsway_gh_profile" />
       </Tooltip>
       <div className={styles.Header_Info}>
         <h2>{name}</h2>

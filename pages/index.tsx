@@ -38,7 +38,7 @@ const appConfigDefault: IAppConfig = {
           description: '🧊 Blender Projects',
           url: 'https://instagram.com/suey.obj',
           socialmedia_icon: <FaInstagram />,
-          image_url: "/swayobj_ig_profile",
+          image_url: "/sueyobj_ig_profile",
         },
         {
           name: 'king-sway',
@@ -83,11 +83,12 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout className={styles.Main}>
-      <AppHeader appState={appState} imageUrl='' />
+      <AppHeader appState={appState} />
 
       <Content className={styles.Content}>
         {appConfig.components.map(c => <ComponentCard key={c.title} component={c} />)}
       </Content>
+
     </Layout>
   );
 }
