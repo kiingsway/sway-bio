@@ -63,6 +63,15 @@ const appConfigDefault: IAppConfig = {
         },
       ]
     },
+    {
+      title: "Latest Projects",
+      type: "latest_projects",
+      content: [
+        {
+          url: "https://project-winederland.vercel.app/"
+        }
+      ]
+    }
   ],
 }
 
@@ -75,7 +84,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout className={styles.Main}>
       <AppHeader appState={appState} imageUrl='' />
-      
+
       <Content className={styles.Content}>
         {appConfig.components.map(c => <ComponentCard key={c.title} component={c} />)}
       </Content>

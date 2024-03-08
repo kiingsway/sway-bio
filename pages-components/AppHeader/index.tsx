@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import ProfileEditModal from '../ProfileEditModal';
 import useBoolean from '@/app/hooks/useBoolean';
 import { Header } from 'antd/es/layout/layout';
-import AppDivider from '../AppDivider';
 
 interface Props {
   imageUrl?: string;
@@ -26,7 +25,8 @@ export default function AppHeader({ appState }: Props): JSX.Element {
       { [styles.Header_Vertical]: !isHorizontal },
     ])}>
       <Tooltip title="Edit profile" mouseEnterDelay={1}>
-        <Avatar className={styles.Avatar} size={72} onClick={openModal} src="/kiingsway_gh_profile" />
+        {/* <Avatar className={styles.Avatar} size={72} onClick={openModal} src="/kiingsway_gh_profile" /> */}
+        <Avatar size={72} onClick={undefined} src="/kiingsway_gh_profile" />
       </Tooltip>
       <div className={styles.Header_Info}>
         <h2>{name}</h2>

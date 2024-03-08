@@ -4,6 +4,9 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineInsertLink } from "react-icons/md";
 import AppDivider from '../AppDivider';
 import { Avatar } from 'antd';
+import { PiProjectorScreenChartDuotone } from "react-icons/pi";
+import LatestProjects from './LatestProjects';
+import LinkButton from '../LinkButton';
 
 interface Props {
   component: TComponent;
@@ -13,11 +16,32 @@ export default function ComponentCard({ component }: Props): JSX.Element {
 
   const { title, type, content } = component;
 
+  const Main = (): JSX.Element => {
+    if (typeof content === 'string') return <span>{content}</span>;
+    if (type === 'links') return (
+      <div className={styles.Insta}>
+        {content.map(item => (
+          <LinkButton
+            key={item.name + item.description}
+            img_src={item.image_url}
+            href={item.url}
+            description={item.description}
+            icon={item.socialmedia_icon}
+          >
+            {item.name}
+          </LinkButton>
+        ))}
+      </div>
+    );
+    if (type === 'latest_projects') return <LatestProjects />;
+    return <></>;
+  }
+
   return (
     <div className={styles.Main}>
       <ComponentHeader type={type} title={title} />
       <AppDivider />
-      {type === 'about' ? content : <ComponentInsta content={content} />}
+      <Main />
     </div>
   );
 }
@@ -57,6 +81,7 @@ function ComponentInsta({ content }: { content: TContentInstaType }): JSX.Elemen
 const ComponentHeader = ({ type, title }: { type: TComponentType, title: string }): JSX.Element => {
 
   const icon: Record<TComponentType, JSX.Element> = {
+    latest_projects: <PiProjectorScreenChartDuotone />,
     about: <FaRegUserCircle />,
     links: <MdOutlineInsertLink />
   };

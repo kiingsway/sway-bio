@@ -1,0 +1,41 @@
+  .Main {
+    display: flex;
+    width: 100%;
+    transition: all 0.2s ease;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+    gap: 10px;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      color: inherit;
+    }
+
+    &_Name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &_Vertical {
+      flex: 1 0 200px;
+      // max-width: 400px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px 10px;
+
+      & .Main_Desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &_Horizontal {
+      flex-direction: row;
+      align-items: center;
+    }
+  }

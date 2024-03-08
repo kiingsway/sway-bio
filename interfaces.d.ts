@@ -1,4 +1,4 @@
-type TComponentType = 'about' | 'links';
+type TComponentType = 'about' | 'links' | 'latest_projects';
 
 type TContentAboutType = string;
 
@@ -14,6 +14,11 @@ interface ComponentProps {
   title: string;
 }
 
+interface IComponentLatestProjects extends ComponentProps {
+  type: 'latest_projects',
+  content: any;
+}
+
 interface IComponentAbout extends ComponentProps {
   type: 'about',
   content: string;
@@ -24,12 +29,14 @@ interface IComponentLinks extends ComponentProps {
   content: TContentInstaType;
 }
 
-type TComponent = IComponentAbout | IComponentLinks;
+type TComponent = IComponentAbout | IComponentLinks | IComponentLatestProjects;
+
+type TLayout = 'horizontal' | 'vertical';
 
 interface IAppConfig {
   name: string;
   bio: string;
-  layout: "horizontal" | "vertical";
+  layout: TLayout;
   theme: 'dark' | 'light' | 'device';
   components: TComponent[],
 }
