@@ -3,7 +3,6 @@ import { Layout } from 'antd';
 import styles from './Home.module.scss';
 import AppHeader from '@/pages-components/AppHeader';
 import { Content } from 'antd/es/layout/layout';
-import ComponentCard from '@/pages-components/ComponentCard';
 import profileData from '@/app/app_parameters';
 import Component from '@/pages-components/Component';
 

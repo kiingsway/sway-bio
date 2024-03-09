@@ -20,7 +20,7 @@ export interface IUseLanguage {
 
 export function useLanguage(defaultLang: TLanguages = 'en'): IUseLanguage {
 
-  React.useEffect(() => { defaultLang !== 'en' ? changeLanguage(defaultLang) : undefined; }, []);
+  if (defaultLang !== 'en') changeLanguage(defaultLang);
 
   const { i18n } = useTranslation();
 
@@ -58,6 +58,7 @@ export function useLanguage(defaultLang: TLanguages = 'en'): IUseLanguage {
   ];
 
   const selected = languages.find(l => l.key === i18n.language);
+  
   if (!selected) throw new Error(`The language ${i18n.language} was not found on languages items.`);
 
   return { selected, items: languages, change: (lang: TLanguages) => changeLanguage(lang) } as const;

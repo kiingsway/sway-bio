@@ -10,30 +10,22 @@ interface Props {
 
 export default function Component({ component }: Props): JSX.Element {
 
+  const { content, icon, title, type } = component;
+
   const Content = (): JSX.Element => {
-    if (component.type === 'text') return <Text content={component.content} />;
-    if (component.type === 'links') return <Links content={component.content} />;
+    if (type === 'text') return <Text content={content} />;
+    if (type === 'links') return <Links content={content} />;
     else return <></>;
   }
 
   return (
     <div className={styles.Main}>
-      <Header {...component} />
+      <div className={styles.Main_Header}>
+        {icon}
+        <h1>{title}</h1>
+      </div>
       <AppDivider />
       <Content />
     </div>
   );
 }
-
-
-interface HeaderProps {
-  icon: JSX.Element;
-  title: string;
-}
-
-const Header = ({ icon, title }: HeaderProps): JSX.Element => (
-  <div className={styles.Main_Header}>
-    {icon}
-    <h1>{title}</h1>
-  </div>
-);
