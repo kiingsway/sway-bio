@@ -3,6 +3,7 @@ import styles from './Component.module.scss';
 import AppDivider from '../AppDivider';
 import Text from './Text';
 import Links from './Links';
+import { TComponent } from '@/interfaces';
 
 interface Props {
   component: TComponent;
@@ -16,7 +17,7 @@ export default function Component({ component }: Props): JSX.Element {
     if (type === 'text') return <Text content={content} />;
     if (type === 'links') return <Links content={content} />;
     else return <></>;
-  }
+  };
 
   return (
     <div className={styles.Main}>

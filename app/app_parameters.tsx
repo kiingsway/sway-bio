@@ -3,6 +3,7 @@ import winederlandIcon from '@/public/winederlandIcon.ico';
 import swayOldHeart from '@/public/sway-old-heart.webp';
 import { MdOutlineInsertLink } from "react-icons/md";
 import { PiProjectorScreenChartDuotone } from "react-icons/pi";
+import { IUserProfile } from "@/interfaces";
 
 const profileData: IUserProfile = {
   title_name: "King Sway",

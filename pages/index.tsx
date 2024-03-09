@@ -5,6 +5,7 @@ import AppHeader from '@/pages-components/AppHeader';
 import { Content } from 'antd/es/layout/layout';
 import profileData from '@/app/app_parameters';
 import Component from '@/pages-components/Component';
+import { IUserProfile } from '@/interfaces';
 
 export type ProfileState = [IUserProfile, React.Dispatch<React.SetStateAction<IUserProfile>>];
 

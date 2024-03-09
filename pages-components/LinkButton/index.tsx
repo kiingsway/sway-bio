@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './LinkButton.module.scss';
 import classNames from 'classnames';
 import { Avatar } from 'antd';
+import { TLayout } from '@/interfaces';
 
 export interface LinkButtonProps {
   href?: string;

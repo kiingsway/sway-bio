@@ -1,3 +1,4 @@
+import { IComponentText } from '@/interfaces';
 import React from 'react';
 
 interface Props {

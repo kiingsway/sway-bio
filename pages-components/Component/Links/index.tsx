@@ -1,6 +1,7 @@
 import LinkButton from '@/pages-components/LinkButton';
 import React from 'react';
 import styles from '../Component.module.scss';
+import { IComponentLinks } from '@/interfaces';
 
 interface Props {
   content: IComponentLinks['content'];

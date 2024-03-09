@@ -1,13 +1,13 @@
-type TComponentType = 'text' | 'links';
+export type TComponentType = 'text' | 'links';
+export type TLayout = 'horizontal' | 'vertical';
 type TThemes = 'dark' | 'light' | 'device';
-type TLayout = 'horizontal' | 'vertical';
 
 interface ComponentProps {
   title: string;
   icon: JSX.Element;
 }
 
-interface IComponentText extends ComponentProps {
+export interface IComponentText extends ComponentProps {
   type: 'text';
   content: {
     text: string;
@@ -17,7 +17,7 @@ interface IComponentText extends ComponentProps {
 }
 
 
-interface IComponentLinks extends ComponentProps {
+export interface IComponentLinks extends ComponentProps {
   type: 'links';
   content: {
     layout: TLayout;
@@ -31,9 +31,9 @@ interface IComponentLinks extends ComponentProps {
   }
 }
 
-type TComponent = IComponentLinks | IComponentText;
+export type TComponent = IComponentLinks | IComponentText;
 
-interface IUserProfile {
+export interface IUserProfile {
   title_name: string;
   bio: string;
   header_layout: TLayout;

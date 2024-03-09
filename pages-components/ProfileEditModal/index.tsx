@@ -5,6 +5,7 @@ import { LuUser, LuLayout } from "react-icons/lu";
 import { BiCommentDetail } from "react-icons/bi";
 import { CgDarkMode } from "react-icons/cg";
 import { ProfileState } from '@/pages';
+import { IUserProfile } from '@/interfaces';
 
 interface Props {
   open: boolean;
@@ -80,4 +81,4 @@ const Label = ({ icon, text }: LabelProps) => (
     {icon}
     <span>{text}</span>
   </div>
-)
+);
