@@ -5,17 +5,18 @@ import classNames from 'classnames';
 import ProfileEditModal from '../ProfileEditModal';
 import useBoolean from '@/app/hooks/useBoolean';
 import { Header } from 'antd/es/layout/layout';
+import { ProfileState } from '@/pages';
 
 interface Props {
-  appState: [IAppConfig, React.Dispatch<React.SetStateAction<IAppConfig>>];
+  profileState: ProfileState;
 }
 
-export default function AppHeader({ appState }: Props): JSX.Element {
+export default function AppHeader({ profileState }: Props): JSX.Element {
 
-  const [appConfig] = appState;
+  const [profile] = profileState;
   const [openEditProfileModal, { setTrue: openModal, setFalse: closeModal }] = useBoolean();
-  const { bio, layout, name } = appConfig;
-  const isHorizontal = layout === 'horizontal';
+  const { bio, title_name, header_layout } = profile;
+  const isHorizontal = header_layout === 'horizontal';
 
   return (
     <Header className={classNames([
@@ -28,10 +29,10 @@ export default function AppHeader({ appState }: Props): JSX.Element {
         <Avatar size={72} src="/kiingsway_gh_profile" />
       </Tooltip>
       <div className={styles.Header_Info}>
-        <h2>{name}</h2>
+        <h2>{title_name}</h2>
         <a target='_blank' rel='noopener noreferrer' href={`https://${bio}`}>{bio}</a>
       </div>
-      <ProfileEditModal open={openEditProfileModal} onClose={closeModal} appState={appState} />
+      <ProfileEditModal open={openEditProfileModal} onClose={closeModal} profileState={profileState} />
     </Header>
   );
 }

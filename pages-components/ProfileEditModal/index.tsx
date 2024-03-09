@@ -4,26 +4,27 @@ import styles from './ProfileEditModal.module.scss';
 import { LuUser, LuLayout } from "react-icons/lu";
 import { BiCommentDetail } from "react-icons/bi";
 import { CgDarkMode } from "react-icons/cg";
+import { ProfileState } from '@/pages';
 
 interface Props {
   open: boolean;
   onClose(): void;
-  appState: [IAppConfig, React.Dispatch<React.SetStateAction<IAppConfig>>];
+  profileState: ProfileState;
 }
 
-export default function ProfileEditModal({ appState, onClose, open }: Props): JSX.Element {
+export default function ProfileEditModal({ profileState, onClose, open }: Props): JSX.Element {
 
   const [form] = Form.useForm();
-  const [appConfig, setAppConfig] = appState;
+  const [profile, setProfile] = profileState;
 
   React.useEffect(() => {
-    if (open) form.setFieldsValue(appConfig);
+    if (open) form.setFieldsValue(profile);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   function handleSubmitForm(): void {
     const values = form.getFieldsValue();
-    setAppConfig((prev: IAppConfig) => ({ ...prev, ...values as IAppConfig }));
+    setProfile((prev: IUserProfile) => ({ ...prev, ...values as IUserProfile }));
     onClose();
   }
 
@@ -34,7 +35,7 @@ export default function ProfileEditModal({ appState, onClose, open }: Props): JS
         <Form
           form={form}
           layout="vertical"
-          initialValues={appConfig}
+          initialValues={profile}
           rootClassName={styles.Main_Form}
           onFinish={handleSubmitForm}
         >

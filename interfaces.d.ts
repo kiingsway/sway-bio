@@ -1,42 +1,42 @@
-type TComponentType = 'about' | 'links' | 'latest_projects';
-
-type TContentAboutType = string;
-
-type TContentInstaType = {
-  name: string;
-  url: string;
-  image_url?: string;
-  description?: string;
-  socialmedia_icon: JSX.Element
-}[];
+type TComponentType = 'text' | 'links';
+type TThemes = 'dark' | 'light' | 'device';
+type TLayout = 'horizontal' | 'vertical';
 
 interface ComponentProps {
   title: string;
+  icon: JSX.Element;
 }
 
-interface IComponentLatestProjects extends ComponentProps {
-  type: 'latest_projects',
-  content: any;
+interface IComponentText extends ComponentProps {
+  type: 'text';
+  content: {
+    text: string;
+    text_alignment: 'left' | 'center' | 'right';
+    font_size: number;
+  }
 }
 
-interface IComponentAbout extends ComponentProps {
-  type: 'about',
-  content: string;
-}
 
 interface IComponentLinks extends ComponentProps {
-  type: 'links',
-  content: TContentInstaType;
+  type: 'links';
+  content: {
+    layout: TLayout;
+    links: Array<{
+      name: string;
+      description: string;
+      url: string;
+      socialmedia_icon?: JSX.Element;
+      image_url: string;
+    }>
+  }
 }
 
-type TComponent = IComponentAbout | IComponentLinks | IComponentLatestProjects;
+type TComponent = IComponentLinks | IComponentText;
 
-type TLayout = 'horizontal' | 'vertical';
-
-interface IAppConfig {
-  name: string;
+interface IUserProfile {
+  title_name: string;
   bio: string;
-  layout: TLayout;
-  theme: 'dark' | 'light' | 'device';
-  components: TComponent[],
+  header_layout: TLayout;
+  theme: TThemes;
+  components: TComponent[];
 }
