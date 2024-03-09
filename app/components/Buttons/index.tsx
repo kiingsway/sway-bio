@@ -22,7 +22,7 @@ const Link: LinkFunction = p => {
       {children}
     </Button>
   );
-}
+};
 
 const Buttons = { Link };
 

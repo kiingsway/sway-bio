@@ -30,7 +30,7 @@ interface ButtonsMenuProps {
 
 interface DropdownValueProps extends IIconLabel { }
 
-type ButtonsFunction<T> = (props: T) => JSX.Element;
+type ButtonsFunction<T> = (p: T) => JSX.Element;
 export type ButtonsTabFunction = ButtonsFunction<ButtonsTabProps>;
 export type ButtonsIconFunction = ButtonsFunction<ButtonProps>;
 export type ButtonsMenuFunction = ButtonsFunction<ButtonsMenuProps>;

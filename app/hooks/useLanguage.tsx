@@ -7,7 +7,7 @@ type TLanguages = 'en' | 'br' | 'fr' | 'es' | 'jp';
 
 export interface ILanguageItem {
   key: TLanguages;
-  icon: React.JSX.Element;
+  icon: JSX.Element;
   label: string;
   onClick: () => Promise<TFunction<"translation", undefined>>;
 }

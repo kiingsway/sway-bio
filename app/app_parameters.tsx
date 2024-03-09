@@ -95,6 +95,6 @@ const profileData: IUserProfile = {
       }
     }
   ]
-}
+};
 
 export default profileData;

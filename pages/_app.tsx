@@ -5,12 +5,12 @@ import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import '@/app/i18n';
 
-export default function App({ Component, pageProps }: AppProps): JSX.Element {
-  return (
-    <>
-      <Head><title>Sway Bio</title></Head>
-      <Analytics />
-      <Component {...pageProps} />
-    </>
-  );
-}
+const App = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <React.Fragment>
+    <Head><title>Sway Bio</title></Head>
+    <Analytics />
+    <Component {...pageProps} />
+  </React.Fragment>
+);
+
+export default App;
