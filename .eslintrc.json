@@ -9,6 +9,7 @@
     "no-console": "warn",
     "no-empty-function": "warn",
     "no-unused-vars": "warn",
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-unreachable": "warn"
   }
 }

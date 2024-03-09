@@ -1,0 +1,59 @@
+.app-progressbar {
+  border: 1px solid #DDDDDD77;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.app-progressbar-loading {
+  background-color: #CCCCCC;
+  transition: all 100ms ease-in-out;
+  border-radius: 4px;
+}
+
+
+
+@keyframes app-progressbar-loading-animation {
+
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 40%;
+  }
+
+  50% {
+    width: 60%;
+  }
+
+  75% {
+    width: 75%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shadow-animation {
+
+  0% {
+    box-shadow: none;
+  }
+
+  25% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+  }
+
+  50% {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .3);
+  }
+
+  75% {
+    box-shadow: 0 7.5px 15px rgba(0, 0, 0, .375);
+  }
+
+  100% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  }
+}

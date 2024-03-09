@@ -1,3 +1,12 @@
+@keyframes blur-in {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(10px);
+  }
+}
+
 .Header {
   position: sticky;
   top: 0;
@@ -9,7 +18,8 @@
   width: 100%;
   max-width: 800px;
   padding: 10px 25px;
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px) opacity(1);
+  animation: blur-in 3000ms forwards 2s; /* Important */
 
   &>* {
     flex: 0 0 auto;
