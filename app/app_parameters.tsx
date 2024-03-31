@@ -81,8 +81,20 @@ const profileData: IUserProfile = {
         layout: 'vertical',
         links: [
           {
+            name: 'Personal Projects (Native)',
+            description: 'Toolbelt funcionalities for React Native (Use with Expo App)',
+            url: "https://expo.dev/@kiingsway/personal-projects",
+            image_url: swayOldHeart.src,
+          },
+          {
+            name: 'Personal Projects',
+            description: 'Toolbelt funcionalities',
+            url: "https://personal-projects-taupe.vercel.app/",
+            image_url: swayOldHeart.src,
+          },
+          {
             name: 'Winederland',
-            description: 'Project for school',
+            description: 'Project for College',
             url: "https://project-winederland.vercel.app/",
             image_url: winederlandIcon.src,
           },

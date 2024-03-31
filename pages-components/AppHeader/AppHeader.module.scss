@@ -18,8 +18,7 @@
   width: 100%;
   max-width: 800px;
   padding: 10px 25px;
-  // backdrop-filter: blur(10px) opacity(1);
-  animation: blur-in 3000ms forwards 2s; /* Important */
+  animation: blur-in 3000ms forwards 2s;
 
   &>* {
     flex: 0 0 auto;

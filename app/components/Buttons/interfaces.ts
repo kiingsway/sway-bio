@@ -30,6 +30,7 @@ interface ButtonsMenuProps {
 
 interface DropdownValueProps extends IIconLabel { }
 
+// eslint-disable-next-line no-unused-vars
 type ButtonsFunction<T> = (p: T) => JSX.Element;
 export type ButtonsTabFunction = ButtonsFunction<ButtonsTabProps>;
 export type ButtonsIconFunction = ButtonsFunction<ButtonProps>;

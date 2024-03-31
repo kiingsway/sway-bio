@@ -36,3 +36,7 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:active {
   background-color: var(--neutral-25-light);
 }
+
+.EmbedProfile {
+  display: none !important;
+}

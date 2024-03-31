@@ -5,7 +5,7 @@ import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import '@/app/i18n';
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => (
+const App = ({ Component, pageProps }: AppProps) => (
   <React.Fragment>
     <Head><title>Sway Bio</title></Head>
     <Analytics />

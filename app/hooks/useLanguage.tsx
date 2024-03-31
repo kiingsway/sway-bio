@@ -15,6 +15,7 @@ export interface ILanguageItem {
 export interface IUseLanguage {
   selected: ILanguageItem;
   items: ILanguageItem[];
+  // eslint-disable-next-line no-unused-vars
   change: (lang: TLanguages) => Promise<TFunction<"translation", undefined>>;
 }
 
